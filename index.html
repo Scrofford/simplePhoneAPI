@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <!--
+  Copyright (c) 2013 The Chromium Authors. All rights reserved.
+  Use of this source code is governed by a BSD-style license that can be
+  found in the LICENSE file.
+  -->
+	<head>
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Expires" content="-1">
+		<title>
+			Core
+		</title>
+		<script type="text/javascript" src="common.js"></script>
+		<script type ="text/javascript" src="example.js"></script>
+	</head>
+	<body data-name="simple_api" data-tools="pnacl glibc clang-newlib win" data-configs="Debug Release" data-path="{tc}/{config}">
+		<h2>
+			Status: <code id="statusField">NO-STATUS</code>
+		</h2>
+		<span id="count">
+			0
+		</span>
+		<button id="testButton">
+			Test
+		</button>
+		<button type="button" id="simulateCallButton">
+			Simulate Call
+		</button>
+		<button type="button" id="simulateSecondCallButton">
+			Simulate Second Call
+		</button>
+		</br>
+		</br>
+		</br>
+		</br>
+		<button type="button" id="udpButton">
+			UDP
+		</button>
+		<button type="button" id="tcpButton">
+			TCP
+		</button>
+		<h3>
+			UDP or TCP: <code id="radioSelectField">NONE-SELECTED</code>
+		</h3>
+		Username: <input type="text" id="usernameinput"></input>
+		<br/>
+		Password: <input type="password" id="passwordinput"></input>
+		<br/>
+		<button id="loginButton">Login</button>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<h2>
+			Auth Name: <code id="authNameField">NO-STATUS</code>
+		<h2>
+			Call Status: <code id="callStatusField">NO-STATUS</code>
+		</h2>
+		<br/>
+		Numpad: <input type="text" id="numberpadentry"></input>
+		<button type="button" id="backspaceButton">Backspace</button>
+		<button type="button" id="clearButton">Clear</button>
+		<br/>
+		<button type="button" id="connectButton">Connect</button>
+		<button type="button" id="endCallButton">End Call</button>
+		<br/>
+		<button type="button" id="1">1</button>
+		<button type="button" id="2">2</button>
+		<button type="button" id="3">3</button>
+		<br/>
+		<button type="button" id="4">4</button>
+		<button type="button" id="5">5</button>
+		<button type="button" id="6">6</button>
+		<br/>
+		<button type="button" id="7">7</button>
+		<button type="button" id="8">8</button>
+		<button type="button" id="9">9</button>
+		<br/>
+		<button type="button" id="#">#</button>
+		<button type="button" id="0">0</button>
+		<button type="button" id="*">*</button>
+		<div id="listener"></div>
+	</body>
+</html>
