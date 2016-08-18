@@ -39,7 +39,8 @@ function handleMessage(message_event){
 		setCount();
 
 		if (callSign === "call_from:"){
-			//if the user is already connected to a call, the "connect" and "end call" buttons are changed to "merge" and "deny incoming call"
+			//if the user is already connected to a call, the "connect" and "end call"
+			//buttons are changed to "merge" and "deny incoming call"
 			var callStatusField = document.getElementById('callStatusField');
 			var callStatus = callStatusField.innerHTML;
 			if (callStatus.substr(0,9) == "Connected"){
@@ -186,7 +187,8 @@ function clear(){
 }
 
 function connect(){
-	//first checks that there is no incoming call or that the user is already on a call by checking the first 10 chars of the call status
+	//first checks that there is no incoming call or that the user is already
+	//on a call by checking the first 10 chars of the call status
 	var callStatusField = document.getElementById('callStatusField');
 	var callStatusText = callStatusField.innerHTML;
 	var checkCall = callStatusText.substring(0,10);
@@ -208,8 +210,9 @@ function connect(){
 		}
 	}
 	else if (checkCall === "NO-STATUS"){
-		//if the user is not on a call numberToCall is posted to the module and the connect button is disabled to prevenet the user from
-		//calling multiple times
+		//if the user is not on a call numberToCall is posted to the module and the
+		//connect button is disabled to prevenet the user from calling multiple
+		//times
 		var numberToCall = document.getElementById('numberpadentry');
 		if (numberToCall.value === ""){
 			common.updateStatus("Please Enter A Valid Number");
@@ -224,7 +227,8 @@ function connect(){
 }
 
 function endCallJav(){
-	//function first checks if user has a call incoming, if not, function ends current call
+	//function first checks if user has a call incoming, if not, function
+	//ends current call
 	var callStatusField = document.getElementById('callStatusField');
 	var callStatusText = callStatusField.innerHTML;
 	var incomingReject = (callStatusText.search("&")> -1);
